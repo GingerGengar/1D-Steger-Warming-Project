@@ -1,16 +1,31 @@
 //Vars.cpp
 #include "Header.h"
 
+//The spatial dimensions of the simulation
+double XB[2];
+
+//How long the simulation is supposed to last
+double TB[2];
+
+//Infinitesmially small space
+double dx;
+
+//Infinitesmially small time
+double dt;
+
 //Represents the size of the number of nodes in the computational domain
 int sdom;
 
-//is going to be an array that holds the density for the entire computational domain. It will be of size sdom
+//Represents how many time iterations
+int TIter;
+
+//is going to be an array that holds the density for the entire computational domain, size sdom
 double *rhoOld; 
 
-//is going to be an array that holds the product of density and fluid velocity. It will be of size sdom 
+//is going to be an array that holds the product of density and fluid velocity, size sdom 
 double *rhoVOld; 
 
-//Represents last element of the solution vector. It will be of size sdom 
+//Represents last element of the solution vector, size sdom 
 double *ElOld;
 
 //Density of the fluid for new time step
@@ -21,3 +36,30 @@ double *rhoVNew;
 
 //"Energy" of fluid in new time step
 double *ElNew;
+
+//Density array
+double *rho;
+
+//Fluid Velocity array
+double *Ve;
+
+//Pressure array
+double *Pr;
+
+//Speed of Sound array
+double *a_s;
+
+//Ratio of Specific heats
+double gam;
+
+//Initializes basic variables
+void Initialize(){
+//Flow Parameters
+gam = 1.4;
+//Spatial and Time Iteration Number
+sdom = 1001; TIter = 10001;
+//Spatial and Time dimensions of simulation
+XB[0] = -5.; XB[1] = 5.; TB[0] = 0.; TB[1] = 1.;
+//Infinitesmially small distance and time
+dx = (XB[1]-XB[0])/(sdom-1); dt = (TB[1]-TB[0])/TIter;
+return;}
