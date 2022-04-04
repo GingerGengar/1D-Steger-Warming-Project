@@ -1,0 +1,6 @@
+First Element of Flux Vector: 
+rho*(lambda_1*(2*gamma - 2) + lambda_2 + lambda_3)/(2*gamma)
+Second Element of Flux Vector: 
+rho*(lambda_1*(2*gamma*u - 2*u) + lambda_2*(a + u) + lambda_3*(-a + u))/(2*gamma)
+Third Element of FLux Vector: 
+rho*(lambda_1*(2*gamma**2*u**2 - 4*gamma*u**2 + 2*u**2) + lambda_2*(2*a**2 + 2*a*gamma*u - 2*a*u + gamma*u**2 - u**2) + lambda_3*(2*a**2 - 2*a*gamma*u + 2*a*u + gamma*u**2 - u**2))/(4*gamma*(gamma - 1))

@@ -1,0 +1,2 @@
+#!/bin/bash
+python Printing.py > Flux_Results.txt
