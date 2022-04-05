@@ -13,6 +13,9 @@ double dx;
 //Infinitesmially small time
 double dt;
 
+//Obscure name for dt/dx. This is supposed to be CFL-like
+double lkm;
+
 //Represents the size of the number of nodes in the computational domain
 int sdom;
 
@@ -37,7 +40,7 @@ double *rhoVNew;
 //"Energy" of fluid in new time step
 double *ElNew;
 
-//Density array
+//Fluid Density array
 double *rho;
 
 //Fluid Velocity array
@@ -48,6 +51,15 @@ double *Pr;
 
 //Speed of Sound array
 double *a_s;
+
+//Flux first solution vector
+double *Flux1;
+
+//Flux second solution vector
+double *Flux2;
+
+//Flux third solution vector
+double *Flux3;
 
 //Ratio of Specific heats
 double gam;

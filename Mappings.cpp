@@ -13,6 +13,7 @@ void Equate(double *trg, double *ref, int start, int stop){
 
 /*Please Rememeber, these functions are dependent on each other. The Pressure function needs the Fluid Velocity function to run first to update the velocities correctly, Likewise the pressure function needs to be run before the speed of sound can be correctly computed*/
 
+
 /*Takes in rho array and rhoV array and computes Velocity array*/
 void FluidVelocity(double *rho, double *rhoV){
     for(int i = 0; i<sdom; i++){Ve[i] = rhoV[i]/rho[i];} return;}
@@ -23,5 +24,5 @@ for(int i = 0; i<sdom; i++){Pr[i] = (gam-1.)*(E[i] - 0.5*rhoV[i]*Ve[i]);} return
 
 /*Computes the Sound speed of the fluid*/
 void FlSpeeda(double *rho){
-    for(int i = 0; i<sdom; i++){a_s[i] = pow(gam*Pr[i]/rho[i]},0.5) return;}
+    for(int i = 0; i<sdom; i++){a_s[i] = pow(gam*Pr[i]/rho[i],0.5);} return;}
 

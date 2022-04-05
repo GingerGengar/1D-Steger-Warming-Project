@@ -37,14 +37,29 @@ void CloseFiles(){
     ParWrite.close(); return;}
 
 /*Prints a variable sized array*/
-void PrintArr(int size, double *arr, std::ofstream Channel){
-    for(int i = 0; i < size; i++){Channel << arr[i] << " ";} Channel << std::endl; return;}
+void PrintArr(int size, double *arr, std::ofstream *Channel){
+    for(int i = 0; i < size; i++){Channel[0] << arr[i] << " ";} Channel[0] << std::endl; return;}
 
 /*Prints Problem Parameters*/
 void ParamOut(){
-    //ParWrite << "#" << std::endl;
-    //ParWrite << stime << " " << dt;
+    ParWrite << "#Specific Heat Ratio gamma" << std::endl << gam << std::endl;
+    ParWrite << "#Lower Bound Spatial Dimension" << std::endl << XB[0] << std::endl;
+    ParWrite << "#Upper Bound Spatial Dimension" << std::endl << XB[1] << std::endl;
+    ParWrite << "#Start Time of Simulation" << std::endl << TB[0] << std::endl;
+    ParWrite << "#End Time of Simulation" << std::endl << TB[1] << std::endl;
+    ParWrite << "#Number of Spatial Partitions" << std::endl << sdom << std::endl;
+    ParWrite << "#Number of Time Iterations" << std::endl << TIter << std::endl;
+    ParWrite << "#size of dx" << std::endl << dx << std::endl;
+    ParWrite << "#size of dt" << std::endl << dt << std::endl;
+    //ParWrite << "#" << std::endl << << std::endl;
     return; }
+
+/*Prints Flow Conditions*/
+void PrintFlowPrimitive(){
+    PrintArr(sdom, rho, &RhoWrite);
+    PrintArr(sdom, Ve, &VelWrite);
+    PrintArr(sdom, Pr, &PresWrite); return;}
+
 
 #if 0
 int main(void){

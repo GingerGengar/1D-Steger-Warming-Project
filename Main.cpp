@@ -1,18 +1,11 @@
 //Main.cpp
 #include "Header.h"
 
-
-
-
-#if 0
 //Entry Point of the program
 int main(void){
 
 //Initializes common flow parameters
 Initialize();
-
-//Prepare Output channels
-SetupFile();
 
 //Allocate Memory to solution pointers
 MemAllocate();
@@ -20,13 +13,18 @@ MemAllocate();
 //Initializes Flow Profile
 FlowInit();
 
-//Write out Initialized Flow Profile
+//Prepare Output channels
+SetupFile();
 
 //Write the Parameters of Program
 ParamOut();
 
 //Begin Simulation
 Simulate();
+
+//Write out Final Fluid Profile
+FlowCondNew();
+PrintFlowPrimitive();
 
 //Close File channels
 CloseFiles();
@@ -35,5 +33,4 @@ CloseFiles();
 MemDeAlloc();
 
 return 0;}
-#endif
 
