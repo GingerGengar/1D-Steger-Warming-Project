@@ -3,6 +3,7 @@
 
 /*Update Flow Conditions Based on New Solution*/
 void FlowCondNew(){
+    FluidDensity(rhoNew);
     FluidVelocity(rhoNew, rhoVNew); 
     FluidPressure(rhoNew, rhoVNew, ElNew); 
     FlSpeeda(rhoNew); return;}
@@ -17,6 +18,7 @@ void AppFlux(int option){for(int i = 1; i<sdom-1; i++){
 /*Hosts the Time Loop, makes call to other high level functions*/
 void Simulate(){for(int i = 0; i < TIter; i++){
     //Update Flow Conditions Based on Old Solution
+    FluidDensity(rhoOld);
     FluidVelocity(rhoOld, rhoVOld); 
     FluidPressure(rhoOld, rhoVOld, ElOld); 
     FlSpeeda(rhoOld);

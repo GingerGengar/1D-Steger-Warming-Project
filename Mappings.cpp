@@ -2,10 +2,10 @@
 #include "Header.h"
 
 /*Maps spatial space into index space using dx*/
-int x2i(double x){return (int)x/dx;}
+int x2i(double x){return (int)(x-XB[0])/dx;}
 
 /*Maps index space into spatial space using dx*/
-double i2x(int i){return i*dx;}
+double i2x(int i){return i*dx + XB[0];}
 
 /*Equates the elements of 2 possibly different sized arrays together*/
 void Equate(double *trg, double *ref, int start, int stop){
@@ -13,6 +13,8 @@ void Equate(double *trg, double *ref, int start, int stop){
 
 /*Please Rememeber, these functions are dependent on each other. The Pressure function needs the Fluid Velocity function to run first to update the velocities correctly, Likewise the pressure function needs to be run before the speed of sound can be correctly computed*/
 
+/*Sets the rho array to the correct one*/
+void FluidDensity(double *rhoinput){Equate(rho, rhoinput, 0, sdom); return;}
 
 /*Takes in rho array and rhoV array and computes Velocity array*/
 void FluidVelocity(double *rho, double *rhoV){

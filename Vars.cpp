@@ -67,7 +67,7 @@ double gam;
 //Initializes basic variables
 void Initialize(){
 //Flow Parameters
-gam = 1.4;
+gam = 1.4; lkm = dt/dx;
 //Spatial and Time Iteration Number
 sdom = 1001; TIter = 10001;
 //Spatial and Time dimensions of simulation

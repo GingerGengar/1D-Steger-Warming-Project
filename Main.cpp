@@ -26,6 +26,9 @@ Simulate();
 FlowCondNew();
 PrintFlowPrimitive();
 
+//Write Dimensions of Problem
+PrintGridCoords();
+
 //Close File channels
 CloseFiles();
 

@@ -54,6 +54,7 @@ void CompFluxes(int option);
 int x2i(double x);
 double i2x(int i);
 void Equate(double *trg, double *ref, int start, int stop);
+void FluidDensity(double *rhoinput);
 void FluidVelocity(double *rho, double *rhoV);
 void FluidPressure(double *rho, double *rhoV, double *E);
 void FlSpeeda(double *rho);
@@ -69,5 +70,6 @@ void CloseFiles();
 void PrintArr(int size, double *arr, std::ofstream *Channel);
 void ParamOut();
 void PrintFlowPrimitive();
+void PrintGridCoords();
 
 #endif

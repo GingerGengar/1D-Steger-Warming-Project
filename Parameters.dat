@@ -1,0 +1,18 @@
+#Specific Heat Ratio gamma
+1.4
+#Lower Bound Spatial Dimension
+-5
+#Upper Bound Spatial Dimension
+5
+#Start Time of Simulation
+0
+#End Time of Simulation
+1
+#Number of Spatial Partitions
+1001
+#Number of Time Iterations
+10001
+#size of dx
+0.01
+#size of dt
+9.999e-05
