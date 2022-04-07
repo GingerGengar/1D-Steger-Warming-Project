@@ -63,11 +63,3 @@ void PrintFlowPrimitive(){
 /*Print the grid coordinates*/
 void PrintGridCoords(){for(int i=0; i<sdom;i++){XWrite << i2x(i) << " ";} return;}
 
-#if 0
-int main(void){
-SetupFile();
-RhoWrite << 123.4124;
-CloseFiles();
-return 0;}
-#endif
-

@@ -1,0 +1,7 @@
+#!/bin/bash
+make clean
+make
+echo "Running Simulation..."
+./Exec
+echo "Reading Data..."
+python -i Profile_Plotting.py

@@ -8,7 +8,7 @@
 #include <math.h>
 
 //Small number for shifting the mod function
-#define epsilon_fix 0.00001
+#define epsilon_fix 0.01
 
 //Definition of variables
 extern double XB[2];
@@ -32,6 +32,8 @@ extern double *Flux1;
 extern double *Flux2;
 extern double *Flux3;
 extern double gam;
+extern double R;
+extern double SF;
 
 //Function Prototypes
 //In Vars.cpp

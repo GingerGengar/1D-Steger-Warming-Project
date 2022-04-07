@@ -64,14 +64,24 @@ double *Flux3;
 //Ratio of Specific heats
 double gam;
 
+//Safety Factor
+double SF;
+
+//Time
+double t;
+
 //Initializes basic variables
 void Initialize(){
 //Flow Parameters
-gam = 1.4; lkm = dt/dx;
+gam = 1.4;
+//Safety Factor
+SF = 0.1;
 //Spatial and Time Iteration Number
-sdom = 1001; TIter = 10001;
+sdom = 1001; TIter = 3001;
 //Spatial and Time dimensions of simulation
-XB[0] = -5.; XB[1] = 5.; TB[0] = 0.; TB[1] = 1.;
+XB[0] = -5.; XB[1] = 5.; TB[0] = 0.; TB[1] = 0.00000001;
 //Infinitesmially small distance and time
-dx = (XB[1]-XB[0])/(sdom-1); dt = (TB[1]-TB[0])/TIter;
+dx = (XB[1]-XB[0])/(sdom-1); 
+dt = (TB[1]-TB[0])/TIter;
+lkm = dt/dx;
 return;}
