@@ -3,8 +3,8 @@
 from Compute import *
 
 print('First Element of Flux Vector: ')
-print(Flux[0])
+print('Flux1 =', Flux[0])
 print('Second Element of Flux Vector: ')
-print(Flux[1])
+print('Flux2 =', Flux[1])
 print('Third Element of FLux Vector: ')
-print(Flux[2])
+print('Flux3 =', Flux[2])

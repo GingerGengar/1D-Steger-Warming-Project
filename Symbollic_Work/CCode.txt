@@ -1,0 +1,12 @@
+First Element of Flux Ve[i]ctor: 
+
+Flux1[i] = rho[i]*(lambda_1*(2*gam - 2) + lambda_2 + lambda_3)/(2*gam)
+
+Second Element of Flux Ve[i]ctor: 
+
+Flux2[i] = rho[i]*(lambda_1*(2*Ve[i]*gam - 2*Ve[i]) + lambda_2*(Ve[i] + a_s[i]) + lambda_3*(Ve[i] - a_s[i]))/(2*gam)
+
+Third Element of FLux Ve[i]ctor: 
+
+Flux3[i] = rho[i]*(lambda_1*(2*Ve[i]**2*gam**2 - 4*Ve[i]**2*gam + 2*Ve[i]**2) + lambda_2*(Ve[i]**2*gam - Ve[i]**2 + 2*Ve[i]*a_s[i]*gam - 2*Ve[i]*a_s[i] + 2*a_s[i]**2) + lambda_3*(Ve[i]**2*gam - Ve[i]**2 - 2*Ve[i]*a_s[i]*gam + 2*Ve[i]*a_s[i] + 2*a_s[i]**2))/(4*gam*(gam - 1))
+

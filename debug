@@ -1,0 +1,4 @@
+#!/bin/bash
+make clean
+make
+./Exec > DebugRes.txt

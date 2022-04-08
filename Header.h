@@ -8,7 +8,7 @@
 #include <math.h>
 
 //Small number for shifting the mod function
-#define epsilon_fix 0.01
+#define epsilon_fix 1e-6
 
 //Definition of variables
 extern double XB[2];

@@ -13,6 +13,9 @@ std::ofstream VelWrite;
 /*File pointer to fluid Pressure*/
 std::ofstream PresWrite;
 
+/*File pointer to Sound Speed*/
+std::ofstream SoundSpWrite;
+
 /*File pointer to Parameters*/
 std::ofstream ParWrite;
 
@@ -24,16 +27,16 @@ void SetupFileFormat(std::ofstream *SolutionFPointer){
 /*Prepare File Output Names*/
 void SetupFileNames(){XWrite.open("XDimensions.dat"); RhoWrite.open("Density.dat");
     VelWrite.open("Velocity.dat"); PresWrite.open("Pressure.dat"); 
-    ParWrite.open("Parameters.dat"); return;}
+    SoundSpWrite.open("SoundSpeed.dat"); ParWrite.open("Parameters.dat"); return;}
 
 /*Prepares the various output channels of the program*/
 void SetupFile(){
     SetupFileFormat(&XWrite); SetupFileFormat(&RhoWrite); SetupFileFormat(&VelWrite);
-    SetupFileFormat(&PresWrite); SetupFileNames();return;}
+    SetupFileFormat(&PresWrite); SetupFileFormat(&SoundSpWrite), SetupFileNames();return;}
 
 /*Close Files*/
 void CloseFiles(){
-    XWrite.close(); RhoWrite.close(); VelWrite.close(); PresWrite.close(); 
+    XWrite.close(); RhoWrite.close(); VelWrite.close(); PresWrite.close(); SoundSpWrite.close();
     ParWrite.close(); return;}
 
 /*Prints a variable sized array*/
@@ -58,7 +61,9 @@ void ParamOut(){
 void PrintFlowPrimitive(){
     PrintArr(sdom, rho, &RhoWrite);
     PrintArr(sdom, Ve, &VelWrite);
-    PrintArr(sdom, Pr, &PresWrite); return;}
+    PrintArr(sdom, Pr, &PresWrite);
+    PrintArr(sdom, a_s, &SoundSpWrite);
+    return;}
 
 /*Print the grid coordinates*/
 void PrintGridCoords(){for(int i=0; i<sdom;i++){XWrite << i2x(i) << " ";} return;}

@@ -6,11 +6,11 @@ from Lib import *
 #Variable Declarations
 alpha = symbols('alpha')
 #Speed of Fluid
-u = symbols('u')
+Ve = symbols('Ve')
 #Speed of Sound
-a = symbols('a')
+a_s = symbols('a_s')
 #Ratio of Heat Capacities
-gamma = symbols('gamma')
+gam = symbols('gam')
 #Just a conveneint way to say half
 haf = Rational(1,2)
 #First Eigenvalue in either + or - flux
