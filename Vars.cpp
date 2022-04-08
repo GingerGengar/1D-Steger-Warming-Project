@@ -67,9 +67,6 @@ double gam;
 //Safety Factor
 double SF;
 
-//Time
-double t;
-
 //Initializes basic variables
 void Initialize(){
 //Flow Parameters
