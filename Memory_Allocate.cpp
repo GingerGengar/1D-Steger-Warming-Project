@@ -15,5 +15,3 @@ void MemDeAlloc(){
     delete [] rhoNew; delete [] rhoVNew; delete [] ElNew;
     delete [] Flux1; delete [] Flux2; delete [] Flux3; 
     delete [] rho; delete [] Ve; delete [] Pr; delete [] a_s;}
-
-

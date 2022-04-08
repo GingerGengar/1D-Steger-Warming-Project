@@ -17,4 +17,3 @@ void FlowInit(){double x; double v;for(int i = 0; i<sdom; i++){
     x = i2x(i); v = InitVelocity(x);
     rhoOld[i] = InitDensity(x); rhoVOld[i] = rhoOld[i]*v;
     ElOld[i] = InitPressure(x)/(gam-1.) + 0.5*rhoVOld[i]*v;} return;}
-

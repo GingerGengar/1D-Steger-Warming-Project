@@ -57,9 +57,9 @@ int x2i(double x);
 double i2x(int i);
 void Equate(double *trg, double *ref, int start, int stop);
 void FluidDensity(double *rhoinput);
-void FluidVelocity(double *rho, double *rhoV);
-void FluidPressure(double *rho, double *rhoV, double *E);
-void FlSpeeda(double *rho);
+void FluidVelocity(double *rhoV);
+void FluidPressure(double *rhoV, double *E);
+void FlSpeeda();
 //In Steger_Warming.cpp
 void FlowCondNew();
 void AppFlux(int option);

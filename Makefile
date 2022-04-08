@@ -5,7 +5,7 @@ Files = Bound_Cond.o Flux.o IO.o Initial_Profile.o Mappings.o Memory_Allocate.o 
 Compiler = g++
 
 #Compile Flags
-Flags = -lm -O3
+Flags = -lm -O3 -flto
 
 #Final Binary
 Exec: $(Files)

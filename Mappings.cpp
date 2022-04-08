@@ -17,14 +17,13 @@ void Equate(double *trg, double *ref, int start, int stop){
 void FluidDensity(double *rhoinput){Equate(rho, rhoinput, 0, sdom); return;}
 
 /*Takes in rho array and rhoV array and computes Velocity array*/
-void FluidVelocity(double *rhoinp, double *rhoV){
-    for(int i = 0; i<sdom; i++){Ve[i] = rhoV[i]/rhoinp[i];} return;}
+void FluidVelocity(double *rhoV){
+    for(int i = 0; i<sdom; i++){Ve[i] = rhoV[i]/rho[i];} return;}
 
 /*Takes in full solution vector, and computes the pressure array*/
-void FluidPressure(double *rhoinp, double *rhoV, double *E){
+void FluidPressure(double *rhoV, double *E){
 for(int i = 0; i<sdom; i++){Pr[i] = (gam-1.)*(E[i] - 0.5*rhoV[i]*Ve[i]);} return;}
 
 /*Computes the Sound speed of the fluid*/
-void FlSpeeda(double *rhoinp){
-    for(int i = 0; i<sdom; i++){a_s[i] = pow(gam*Pr[i]/rhoinp[i],0.5);} return;}
-
+void FlSpeeda(){
+    for(int i = 0; i<sdom; i++){a_s[i] = pow(gam*Pr[i]/rho[i],0.5);} return;}
